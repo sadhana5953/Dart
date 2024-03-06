@@ -7,6 +7,5 @@ void main()
     stdout.write('Enter your last name : ');
     String last_name = stdin.readLineSync()!;
     
-    String fullname=first_name+' '+last_name;
-    print('your name is $fullname');
+    print('your name is $first_name $last_name');
 }
