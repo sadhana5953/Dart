@@ -2,23 +2,22 @@
 import 'dart:io';
 void main()
 {
-	int choice,a,b;
+    int choice,a,b;
+	
+    print('Enter 1 for Addition');
+    print('Enter 2 for Division');
+    print('Enter 3 for Multiplication');
+    print('Enter 4 for Substraction');
 
+    stdout.write('Enter your choice :');
+    choice = int.parse(stdin.readLineSync()!);
+    
     stdout.write('Enter first number : ');
     a = int.parse(stdin.readLineSync()!);
 
     stdout.write('Enter second number : ');
     b = int.parse(stdin.readLineSync()!);
 
-    print('Enter 1 for Addition');
-    print('Enter 2 for Division');
-    print('Enter 3 for Multiplication');
-    print('Enter 4 for Substraction');
-    print('Enter 0 for exit');
-
-    stdout.write('Enter your choice :');
-    choice = int.parse(stdin.readLineSync()!);
-    
     switch(choice)
     {
         case 1:print('$a + $b = ${a+b}');
@@ -29,6 +28,6 @@ void main()
         break;
         case 4:print('$a - $b = ${a-b}');
         break;
-        case 0 :break;
+        default :print('enter valid choice !');
     }
 }
