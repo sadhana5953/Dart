@@ -4,6 +4,12 @@ void main()
 {
 	int choice,a,b;
 
+    stdout.write('Enter first number : ');
+    a = int.parse(stdin.readLineSync()!);
+
+    stdout.write('Enter second number : ');
+    b = int.parse(stdin.readLineSync()!);
+
     print('Enter 1 for Addition');
     print('Enter 2 for Division');
     print('Enter 3 for Multiplication');
@@ -13,18 +19,6 @@ void main()
     stdout.write('Enter your choice :');
     choice = int.parse(stdin.readLineSync()!);
     
-    if(choice==0)
-    {
-        print('break');
-    }
-    else
-    {
-        stdout.write('Enter first number : ');
-    a = int.parse(stdin.readLineSync()!);
-
-    stdout.write('Enter second number : ');
-    b = int.parse(stdin.readLineSync()!);
-
     switch(choice)
     {
         case 1:print('$a + $b = ${a+b}');
@@ -35,6 +29,6 @@ void main()
         break;
         case 4:print('$a - $b = ${a-b}');
         break;
-    }
+        case 0 :break;
     }
 }
