@@ -1,0 +1,28 @@
+//19.Wap to to find and delete repeat elements in array.
+import 'dart:io';
+main()
+{
+    int n;
+    stdout.write("Enter size of array : ");
+    n=int.parse(stdin.readLineSync()!);
+    List arr=[];
+
+    for(int i=0;i<n;i++)
+    {
+        stdout.write("Enter a[$i] : ");
+        int x=int.parse(stdin.readLineSync()!);
+        arr.add(x);
+    }
+    
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+    {
+        if(arr[i]==arr[j])
+        {
+            arr[j]=0;
+        }
+    }
+    }
+    print(arr);
+}
