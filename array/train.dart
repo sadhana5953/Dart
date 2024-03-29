@@ -7,7 +7,7 @@
 import 'dart:io';
 class Train
 {
-    int? number,time,choice;
+    int? number,time;
     String? name,source,destination;
     
     Train(number,name,source,destination,time)
@@ -31,7 +31,7 @@ class Train
 void main()
 {
     List<Train> train=[];
-
+    int choice;
     do
     {
     print("\nRailway Reservation System :-");
@@ -44,14 +44,13 @@ void main()
     {
         case 1 : add(train);
         break;
-        case 2 : display(train,train.length);
+        case 2 : display(train);
         break;
         case 3 : print("Exiting..!");
-        return ;
         break;
         default : print("Invalid choice !");
     }
-    }while(choice!=3)
+    }while(choice!=3);
  
 }
 void add(List train)
@@ -73,12 +72,12 @@ void add(List train)
     train.add(Train(number,name,source,destination,time));
     
 }
-void display(List train,int length)
+void display(List train)
     {
         stdout.write("Enter train number to display train record : ");
         int x=int.parse(stdin.readLineSync()!);
         int ch=0;
-       for(int i=0;i<length;i++)
+       for(int i=0;i<train.length;i++)
        {
         if(train[i].number==x)
         {
